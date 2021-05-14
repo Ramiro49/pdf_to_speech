@@ -61,9 +61,9 @@ name_file = input("Write the name of your PDF file (Without extension):\n -> ")
 
 plain_text = read_from_pdf(name_file)
 
-# Google Cloud TTS support maximum 5000 characters per request
+# Google Cloud TTS allows a maximum of 5000 characters per request
 if len(plain_text) > 5000:
-    # Create a list with all the sentences
+    # Create list with all the sentences
     list_sentences = plain_text.split(".")
     divider = (len(list_sentences) // 5000) + 2
 
